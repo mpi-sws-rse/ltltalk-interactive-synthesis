@@ -1,0 +1,1603 @@
+
+======
+
+utterance: take all green from [7,4] to water
+number of initial candidates: 12
+number of attempts to get initial candidates: 19
+initial candidates creation time: 79.09761243899993
+
+======
+
+utterance: bring one green from [7,4] to [3,4]
+number of initial candidates: 11
+number of attempts to get initial candidates: 19
+initial candidates creation time: 24.84512719199938
+
+======
+
+utterance: bbring one green from [7,4] to [3,4]
+number of initial candidates: 10
+number of attempts to get initial candidates: 20
+initial candidates creation time: 119.53009887699955
+was not able to disambiguate between before(pick_one_green_x_item_at_7_4,at_3_4) and and(neg(pick_one_red_circle_item_at_7_4),before(pick_one_green_x_item_at_7_4,at_3_4)). Removing and(neg(pick_one_red_circle_item_at_7_4),before(pick_one_green_x_item_at_7_4,at_3_4))
+
+======
+
+utterance: visit [7,4] but stay dry
+number of initial candidates: 4
+number of attempts to get initial candidates: 8
+initial candidates creation time: 2.561471121000068
+
+======
+
+utterance: visit [7,4] but stay dry
+number of initial candidates: 4
+number of attempts to get initial candidates: 8
+initial candidates creation time: 2.0036656130032497
+
+======
+
+utterance: visit [7,4] but stay dry
+number of initial candidates: 4
+number of attempts to get initial candidates: 9
+initial candidates creation time: 2.1169159560013213
+
+======
+
+utterance: visit [7,4] but stay dry
+number of initial candidates: 5
+number of attempts to get initial candidates: 9
+initial candidates creation time: 2.337456764998933
+
+======
+
+utterance: get me one red from [7,4]
+number of initial candidates: 6
+number of attempts to get initial candidates: 6
+initial candidates creation time: 3.633288696000818
+was not able to disambiguate between eventually(pick_one_red_x_item_at_7_4) and before(at_7_4,pick_one_red_x_item_at_7_4). Removing before(at_7_4,pick_one_red_x_item_at_7_4)
+
+======
+
+utterance: get me one red from [7,4], pls
+number of initial candidates: 6
+number of attempts to get initial candidates: 6
+initial candidates creation time: 3.213274278999961
+was not able to disambiguate between eventually(pick_one_red_x_item_at_7_4) and before(at_7_4,pick_one_red_x_item_at_7_4). Removing before(at_7_4,pick_one_red_x_item_at_7_4)
+
+======
+
+utterance: be dry until reaching [4,1]
+
+======
+
+utterance: take one red item from [7,4]
+number of initial candidates: 7
+number of attempts to get initial candidates: 11
+propositional formula building times are [5.627790022990666]
+initial candidates creation time: 14.422803547990043
+solving times are [0.24762604699935764, 0.19491314300103113, 0.2287201620056294, 0.19315655500395223, 0.21016389498254284, 0.21078995399875566, 0.2078246669843793, 0.39187309704720974, 0.3828581689740531, 0.34813629899872467, 0.7581045480328612]
+was not able to disambiguate between before(at_7_4,pick_one_red_x_item_at_7_4) and and(eventually(pick_one_red_x_item_at_7_4),before(at_7_4,at_7_4)). Removing and(eventually(pick_one_red_x_item_at_7_4),before(at_7_4,at_7_4))
+
+======
+
+utterance: pick one red item from 7,4
+number of initial candidates: 6
+number of attempts to get initial candidates: 11
+propositional formula building times are [5.832756945048459]
+initial candidates creation time: 13.397709102020599
+solving times are [0.4398636380210519, 0.4148538439767435, 0.1967512519331649, 0.35013318504206836, 0.19265469897072762, 0.1788307640235871, 0.4049360279459506, 0.17524738097563386, 0.46806355100125074, 0.3956616459181532, 0.3597130890702829]
+
+======
+
+utterance: take every green item from 7,4
+
+======
+
+utterance: take every green item from 7,4
+
+======
+
+utterance: take every green item from 7,4
+
+======
+
+utterance: take every green item from 7,4
+
+======
+
+utterance: take every green item from 7,4
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [7.195594371005427]
+initial candidates creation time: 12.108232983970083
+solving times are [0.3090285800280981, 0.3788076270138845, 0.29228181601502, 0.342412508034613, 0.2982824300415814, 0.3656904340023175, 0.3407644410035573]
+was not able to disambiguate between eventually(pick_every_green_x_item_at_7_4) and before(at_7_4,pick_every_green_x_item_at_7_4). Removing before(at_7_4,pick_every_green_x_item_at_7_4)
+
+======
+
+utterance: take every green from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [6.984218388970476]
+initial candidates creation time: 10.519624205015134
+solving times are [0.25710258004255593, 0.22515111102256924, 0.293265282001812, 0.22792297700652853, 0.2604838350089267, 0.22901299700606614]
+was not able to disambiguate between before(at_7_4,pick_every_green_x_item_at_7_4) and eventually(pick_every_green_x_item_at_7_4). Removing before(at_7_4,pick_every_green_x_item_at_7_4)
+
+======
+
+utterance: get red from [7,4] and then go to [7,5]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [7.37674842501292]
+initial candidates creation time: 11.773682864033617
+solving times are [0.4717042269767262, 0.3113958460162394, 0.264397487975657, 0.2355544199817814, 0.35166777204722166, 0.3494135219953023]
+was not able to disambiguate between before(at_7_4,before(pick_every_red_x_item_at_7_4,at_7_5)) and before(pick_every_red_x_item_at_7_4,at_7_5). Removing before(at_7_4,before(pick_every_red_x_item_at_7_4,at_7_5))
+
+======
+
+utterance: get red from [7,4] and then go to [7,5
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [6.7867641299963]
+initial candidates creation time: 11.703743477002718
+solving times are [0.3835661870543845, 0.5997170619666576, 0.6878567339736037, 0.570223354967311, 0.3864246570155956]
+
+======
+
+utterance: get one red from [7,4] and then go to [7,5]
+number of initial candidates: 3
+number of attempts to get initial candidates: 7
+propositional formula building times are [7.069534502981696]
+initial candidates creation time: 12.683589280000888
+solving times are [0.22657546499976888, 0.29171078599756584, 0.34296036697924137, 0.31404788204235956, 0.39179606502875686, 0.28945047000888735, 0.28257858200231567]
+was not able to disambiguate between before(pick_one_red_x_item_at_7_4,at_7_5) and before(at_7_4,before(pick_one_red_x_item_at_7_4,at_7_5)). Removing before(at_7_4,before(pick_one_red_x_item_at_7_4,at_7_5))
+
+======
+
+utterance: get one red from [7,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [5.9882454089820385]
+initial candidates creation time: 9.275774986948818
+solving times are [0.3638154930085875, 0.19962959102122113, 0.26267411798471585, 0.25703595898812637, 0.2553708349587396]
+
+======
+
+utterance: get one red from [7,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.573112051002681]
+initial candidates creation time: 9.050651062978432
+solving times are [0.3208853719988838, 0.193408538994845, 0.24670260096900165, 0.2026960959774442, 0.2480230419896543, 0.19171715498669073]
+was not able to disambiguate between before(at_7_4,pick_one_red_x_item_at_7_4) and eventually(pick_one_red_x_item_at_7_4). Removing before(at_7_4,pick_one_red_x_item_at_7_4)
+
+======
+
+utterance: go to [7,5]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.5059555089683272]
+initial candidates creation time: 1.049663937999867
+solving times are [0.02342248900095001, 0.03949919797014445, 0.04292075301054865, 0.04372701799729839, 0.042457411997020245, 0.03982135298429057]
+
+======
+
+utterance: get one blue from [7,4] and then go to [7,5]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [8.761257660982665]
+initial candidates creation time: 14.396285165974405
+solving times are [0.3528034510090947, 0.27220008097356185, 0.38586390198906884, 0.3800926500116475, 0.35839901003055274, 0.32168868696317077, 0.3110908679664135]
+was not able to disambiguate between before(at_7_4,before(pick_one_x_x_item_at_7_4,at_7_5)) and before(pick_one_x_x_item_at_7_4,at_7_5). Removing before(at_7_4,before(pick_one_x_x_item_at_7_4,at_7_5))
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.43539265100844204]
+initial candidates creation time: 0.7833065890008584
+solving times are [0.02661580400308594, 0.0222722589969635, 0.02432456996757537, 0.023196221969556063, 0.0240656069945544]
+
+======
+
+utterance: go to [4,4] and then go to [2,4]
+number of initial candidates: 3
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.9490066620055586]
+initial candidates creation time: 2.323408027004916
+solving times are [0.055301647051237524, 0.06513754901243374, 0.07062182697700337, 0.05562734795967117, 0.2194100430351682, 0.09829717403044924, 0.0714421320008114]
+
+======
+
+utterance:  go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.4092514190124348]
+initial candidates creation time: 0.789062254014425
+solving times are [0.02966512000421062, 0.022543724975548685, 0.027642911998555064, 0.02242063102312386, 0.021284157992340624]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.4322187200305052]
+initial candidates creation time: 0.8855305329780094
+solving times are [0.023191347951069474, 0.024190602998714894, 0.027794899011496454, 0.02931889903265983, 0.02483675500843674, 0.022345445002429187]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.4575558729702607]
+initial candidates creation time: 0.9465629960177466
+solving times are [0.02057834598235786, 0.03139547002501786, 0.03619935596361756, 0.029097450023982674, 0.03247030504280701]
+
+======
+
+utterance: go to [4,4] and then go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.3697896280209534]
+initial candidates creation time: 2.562212807009928
+solving times are [0.05960964102996513, 0.06187199096893892, 0.058410244004335254, 0.05826786201214418, 0.2548054520157166, 0.08129210403421894, 0.055612950993236154]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.4555400310200639]
+initial candidates creation time: 0.8831543810083531
+solving times are [0.020833382033742964, 0.024957571004051715, 0.023587405041325837, 0.024044854973908514, 0.022372759005520493, 0.022515067947097123]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.43144356698030606]
+initial candidates creation time: 0.886382287950255
+solving times are [0.02116475295042619, 0.024764722969848663, 0.028321054007392377, 0.02725249098148197, 0.024934909015428275, 0.022886477003339678]
+
+======
+
+utterance: go to [4,4] and then go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [1.3038941530394368]
+initial candidates creation time: 2.5648123379796743
+solving times are [0.05111130198929459, 0.10800431697862223, 0.06967596401227638, 0.10019857698353007, 0.06115432997466996, 0.06300558400107548]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.43025336699793115]
+initial candidates creation time: 0.7783771979738958
+solving times are [0.02299082896206528, 0.023742274031974375, 0.02286149701103568, 0.02312307502143085, 0.02362327597802505]
+
+======
+
+utterance: go to [4,4] and then go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [1.3865989319747314]
+initial candidates creation time: 2.37768880702788
+solving times are [0.12990391801577061, 0.13312058796873316, 0.0580332109821029, 0.05837039300240576, 0.05375089397421107, 0.05038105696439743]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.46781691699288785]
+initial candidates creation time: 1.1864084789995104
+solving times are [0.0200369119993411, 0.03980640700319782, 0.030385621008463204, 0.026821036997716874, 0.03608413698384538, 0.03931382898008451, 0.041865836014039814]
+
+======
+
+utterance: go to [4,4] and then go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.663854478043504]
+initial candidates creation time: 2.5422563229803927
+solving times are [0.0607651139725931, 0.05474357696948573, 0.05755670601502061, 0.05224670097231865, 0.05541698797605932, 0.06500356103060767, 0.0565671410295181]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.42963637597858906]
+initial candidates creation time: 0.7770907650119625
+solving times are [0.024057398026343435, 0.02307786699384451, 0.024303500016685575, 0.022728113981429487, 0.021027181996032596]
+
+======
+
+utterance: go to [4,4] and then go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.2860823589726351]
+initial candidates creation time: 2.705876019957941
+solving times are [0.05929038202157244, 0.0937608529930003, 0.07729349401779473, 0.06406815303489566, 0.2672587109846063, 0.09277186397230253, 0.07419400999788195]
+
+======
+
+utterance: go to [3,4] before2 go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.0648906060378067]
+initial candidates creation time: 2.045969755970873
+solving times are [0.04744059999939054, 0.058856722025666386, 0.06671045301482081, 0.0791146379779093, 0.04936285299481824, 0.05199429101776332, 0.059888800024054945]
+
+======
+
+utterance: go to [3,4] before2 go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.9834620119654574]
+initial candidates creation time: 1.979071925044991
+solving times are [0.048577069013845176, 0.06226782500743866, 0.06482546799816191, 0.06045697903027758, 0.07125320000341162, 0.07563708600355312, 0.05931199400220066]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.4282921309932135]
+initial candidates creation time: 0.8870941159548238
+solving times are [0.022744946996681392, 0.023160165001172572, 0.02125457499641925, 0.0219068750157021, 0.023940794984810054, 0.031810721033252776]
+
+======
+
+utterance: go to [3,4] before2 go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.710936588991899]
+initial candidates creation time: 1.631905308982823
+solving times are [0.03159754001535475, 0.05437264801003039, 0.04196131101343781, 0.05848076398251578, 0.05348508199676871, 0.0692193930153735, 0.050592868006788194]
+
+======
+
+utterance: go to [3,4] before3 go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.6368058350053616]
+initial candidates creation time: 1.2880459559964947
+solving times are [0.03398078598547727, 0.03921987098874524, 0.032389297033660114, 0.04961787100182846, 0.035531606001313776, 0.03537292894907296]
+
+======
+
+utterance: go to [3,4] before4 go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.884360525989905]
+initial candidates creation time: 1.709847571037244
+solving times are [0.036091141984798014, 0.040105529013089836, 0.04513843799941242, 0.05520344997057691, 0.06183250801404938, 0.045764730020891875, 0.046248227008618414]
+
+======
+
+utterance: go to [3,4] before5 go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.8484162699896842]
+initial candidates creation time: 1.5112117279786617
+solving times are [0.05068739998387173, 0.03843201196286827, 0.04409850499359891, 0.040275336999911815, 0.04301818204112351, 0.05665195896290243]
+
+======
+
+utterance: go to [3,4] and2 go to [2,3]
+number of initial candidates: 3
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.0085231640259735]
+initial candidates creation time: 1.8988593019894324
+solving times are [0.055094187962822616, 0.040614880970679224, 0.0806311690248549, 0.048760715988464653, 0.060473879042547196, 0.04990082298172638, 0.060875248978845775]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.8528366069658659]
+initial candidates creation time: 1.8230835869908333
+solving times are [0.043732760997954756, 0.05744326097192243, 0.06976542097982019, 0.06537739897612482, 0.06251638603862375, 0.07833701599156484, 0.09242320997873321]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [2.511292358976789]
+initial candidates creation time: 3.783744028012734
+solving times are [0.047742465045303106, 0.06464741699164733, 0.07257198204752058, 0.07011654798407108, 0.07457079301821068, 0.10653591703157872, 0.14408947702031583]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.836601488001179]
+initial candidates creation time: 1.7824827530421317
+solving times are [0.042172393994405866, 0.06414938397938386, 0.060913096996955574, 0.06089370301924646, 0.07821977604180574, 0.06750987999839708, 0.05752762098563835]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [2.221154883969575]
+initial candidates creation time: 3.258450963010546
+solving times are [0.04994899802841246, 0.06096197001170367, 0.05201750801643357, 0.05510704702464864, 0.06608151399996132, 0.06415350799215958, 0.07764621003298089]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.861665137053933]
+initial candidates creation time: 3.073403051996138
+solving times are [0.05241460201796144, 0.07160569203551859, 0.08467568701598793, 0.0757524209911935, 0.07213584805140272, 0.07216392096597701, 0.18818140000803396]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.6015840499894693]
+initial candidates creation time: 1.6125699619879015
+solving times are [0.03499120398191735, 0.06201707501895726, 0.0593724480131641, 0.05712419998599216, 0.05318031396018341, 0.05258476099697873, 0.06095670798094943]
+
+======
+
+utterance: go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.6877413210459054]
+initial candidates creation time: 1.0347918170155026
+solving times are [0.025233555992599577, 0.019827561976853758, 0.021795482956804335, 0.020608969032764435, 0.02095098397694528]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.6355540950316936]
+initial candidates creation time: 1.3617571669747122
+solving times are [0.032729813014157116, 0.03909545100759715, 0.03404298395616934, 0.03844405896961689, 0.05583779397420585, 0.03531255596317351, 0.041431887017097324]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.6555242020403966]
+initial candidates creation time: 1.4963440179708414
+solving times are [0.03202040703035891, 0.04131524299737066, 0.034503520000725985, 0.04236794501775876, 0.03964869095943868, 0.038876384031027555, 0.04835293599171564]
+was not able to disambiguate between before(at_2_3,at_3_4) and and(eventually(at_3_4),before(at_2_3,at_3_4)). Removing and(eventually(at_3_4),before(at_2_3,at_3_4))
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [0.9379449390107766]
+initial candidates creation time: 2.131520555994939
+solving times are [0.057520697999279946, 0.06441343104233965, 0.08921767200808972, 0.08897220500512049, 0.07684908795636147, 0.06513385998550802, 0.06556461501168087]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.8834609169862233]
+initial candidates creation time: 1.534872533986345
+solving times are [0.04391727497568354, 0.04788828396704048, 0.041442260961048305, 0.04525431600632146, 0.049397249007597566, 0.04544190998421982]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.4904125409666449]
+initial candidates creation time: 2.567850688996259
+solving times are [0.05158238497097045, 0.057880481996107846, 0.08321169397095218, 0.0750498260022141, 0.060864892962854356, 0.07239550998201594, 0.06771341501735151]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.0098231279989704]
+initial candidates creation time: 2.630529087036848
+solving times are [0.04534264001995325, 0.06645703501999378, 0.09761582198552787, 0.0923939939821139, 0.07005750096868724, 0.07612889702431858, 0.061582894006278366, 0.05713004298740998, 0.06713223998667672, 0.06909628602443263]
+
+======
+
+utterance: go to [3,4] simultaneously go to [2,3]
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.1382962059578858]
+initial candidates creation time: 2.8285170999588445
+solving times are [0.05094981496222317, 0.06538492103572935, 0.10088334797183052, 0.07663109502755105, 0.0594038320123218, 0.06426717300200835, 0.07673296402208507, 0.0843233090126887, 0.0744398949900642, 0.05645565502345562]
+was not able to disambiguate between before(at_2_3,at_3_4) and and(eventually(at_3_4),before(at_2_3,at_3_4)). Removing and(eventually(at_3_4),before(at_2_3,at_3_4))
+
+======
+
+utterance: visit water
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [0.4175193919800222]
+initial candidates creation time: 1.2825407479540445
+solving times are [0.027030469034798443, 0.0316146970144473, 0.024622422992251813, 0.03132668504258618, 0.027742683014366776, 0.03139400598593056, 0.028558220015838742, 0.027240660041570663, 0.02827060199342668, 0.03628820495214313]
+was not able to disambiguate between eventually(neg(at_dry)) and until(at_dry,neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: visit water
+number of initial candidates: 8
+number of attempts to get initial candidates: 10
+propositional formula building times are [0.6391790380002931]
+initial candidates creation time: 1.713508146989625
+solving times are [0.036733059969265014, 0.03803124203113839, 0.03924400301184505, 0.04539632401429117, 0.04080487403552979, 0.04376523697283119, 0.04022321000229567, 0.04272854601731524, 0.05029221100267023, 0.04093034699326381]
+was not able to disambiguate between eventually(neg(at_dry)) and until(at_dry,neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: visit water
+number of initial candidates: 8
+number of attempts to get initial candidates: 10
+propositional formula building times are [0.6366696910117753]
+initial candidates creation time: 1.6392859870102257
+solving times are [0.037520668003708124, 0.043345678015612066, 0.04042991599999368, 0.04741165298037231, 0.03939592302776873, 0.0391319949994795, 0.043796890997327864, 0.048638098989613354, 0.047659160976763815, 0.040244272036943585]
+was not able to disambiguate between eventually(neg(at_dry)) and until(at_dry,neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: visit water
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [0.6507896919501945]
+initial candidates creation time: 1.6974707249901257
+solving times are [0.04047185700619593, 0.03837692103115842, 0.05228277400601655, 0.040853049024008214, 0.0390265790047124, 0.04683192301308736, 0.044836184999439865, 0.046613925020210445, 0.04202074202476069, 0.04082688799826428]
+was not able to disambiguate between until(at_dry,neg(at_dry)) and eventually(neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: visit water
+number of initial candidates: 3
+number of attempts to get initial candidates: 3
+propositional formula building times are [0.6443097779992968]
+initial candidates creation time: 0.9446630899910815
+solving times are [0.03649942501215264, 0.048618386033922434, 0.037962462985888124]
+
+======
+
+utterance: visit water
+number of initial candidates: 3
+number of attempts to get initial candidates: 3
+propositional formula building times are [0.6664963900111616]
+initial candidates creation time: 1.0209374949918129
+solving times are [0.03471293702023104, 0.04715657699853182, 0.0654962650150992]
+was not able to disambiguate between eventually(neg(at_dry)) and until(at_dry,neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: visit water
+number of initial candidates: 3
+number of attempts to get initial candidates: 3
+propositional formula building times are [0.9180963690159842]
+initial candidates creation time: 1.1801320769591257
+solving times are [0.0383475809940137, 0.03227983397664502, 0.03341293998528272]
+
+======
+
+utterance: visit water
+number of initial candidates: 3
+number of attempts to get initial candidates: 3
+propositional formula building times are [0.5836753139737993]
+initial candidates creation time: 0.8511615589959547
+solving times are [0.03230038599576801, 0.030655342037789524, 0.045272453979123384]
+was not able to disambiguate between until(at_dry,neg(at_dry)) and eventually(neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: bring one red to [7,5]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [6.771241437993012]
+initial candidates creation time: 10.804083655006252
+solving times are [0.372853399021551, 0.2832915539620444, 0.301940637989901, 0.2582249009865336, 0.25585931102978066, 0.22440596402157098]
+
+======
+
+utterance: pick one red item at [7,4]
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.808231149974745]
+initial candidates creation time: 9.114463630015962
+solving times are [0.2449725529877469, 0.22482962196227163, 0.19693678501062095, 0.2073053290368989, 0.20282294496428221, 0.22828836605185643]
+was not able to disambiguate between before(at_7_4,pick_one_red_x_item_at_7_4) and eventually(pick_one_red_x_item_at_7_4). Removing before(at_7_4,pick_one_red_x_item_at_7_4)
+
+======
+
+utterance: pick one red item at [7,4]
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [5.732985082955565]
+initial candidates creation time: 10.351205582963303
+solving times are [0.2093234360218048, 0.23949206003453583, 0.22095370304305106, 0.2597184919868596, 0.3147741199936718, 0.31607124995207414, 0.2318616040283814]
+was not able to disambiguate between before(at_7_4,pick_one_red_x_item_at_7_4) and eventually(pick_one_red_x_item_at_7_4). Removing before(at_7_4,pick_one_red_x_item_at_7_4)
+was not able to disambiguate between eventually(pick_one_red_x_item_at_7_4) and and(eventually(at_7_4),eventually(pick_one_red_x_item_at_7_4)). Removing and(eventually(at_7_4),eventually(pick_one_red_x_item_at_7_4))
+
+======
+
+utterance: eventually at kitchen
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.3829895079834387]
+initial candidates creation time: 2.142880977015011
+solving times are [0.0653870899695903, 0.07727684202836826, 0.06843913398915902, 0.06796152796596289, 0.07821543398313224]
+
+======
+
+utterance: eventually in bathroom
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.6302006269688718]
+initial candidates creation time: 1.0765474429936148
+solving times are [0.02927931002341211, 0.031697342987172306, 0.029190464003477246, 0.029920881963334978, 0.03847213898552582]
+
+======
+
+utterance: eventually at bathroom
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.6289581460296176]
+initial candidates creation time: 1.1395865549566224
+solving times are [0.03585699398536235, 0.03256738401250914, 0.03877323598135263, 0.032365489983931184, 0.03252964199054986]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [1.1772934649488889]
+initial candidates creation time: 1.3549084579572082
+solving times are [0.05046764999860898, 0.06813651998527348]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.9361430330318399]
+initial candidates creation time: 1.1080882819951512
+solving times are [0.03488098701927811, 0.07073114695958793]
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the kitchen
+
+======
+
+utterance: go to the kitchen
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.8773714149720035]
+initial candidates creation time: 1.0566041899728589
+solving times are [0.042484860052354634, 0.06745008897269145]
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.8814724380499683]
+initial candidates creation time: 1.0588818990509026
+solving times are [0.04522297001676634, 0.06805272499332204]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [1.1894882409833372]
+initial candidates creation time: 1.4297914230264723
+solving times are [0.052620302012655884, 0.0823201349703595]
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.8636303800158203]
+initial candidates creation time: 1.2264139609760605
+solving times are [0.046468510990962386, 0.06643675098894164]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [1.0897144409827888]
+initial candidates creation time: 1.461324625997804
+solving times are [0.04784341296181083, 0.06827798899030313]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.9417519859853201]
+initial candidates creation time: 1.3228245680220425
+solving times are [0.043387626006733626, 0.0637835210072808]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [0.9201715979725122]
+initial candidates creation time: 1.2671493280213326
+solving times are [0.037792411050759256, 0.05541836598422378]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 1
+number of attempts to get initial candidates: 2
+propositional formula building times are [1.205171296998742]
+initial candidates creation time: 1.621020447999399
+solving times are [0.07731440199859207, 0.04952011599925754]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.5045054410002194]
+initial candidates creation time: 2.9349168419994385
+solving times are [0.050567469999805326, 0.048203279000517796, 0.04397894199973962, 0.04914988100063056, 0.06183001799945487, 0.06111350500032131, 0.05404038800043054]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.2350685609999346]
+initial candidates creation time: 2.5456109389997437
+solving times are [0.05414334300076007, 0.055030323999744724, 0.07247437499972875, 0.06138468999961333, 0.05049893799878191, 0.05078184999911173, 0.05513143399912224]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.245224809001229]
+initial candidates creation time: 2.576752318000217
+solving times are [0.056933633000880945, 0.05577800699938962, 0.0695626610013278, 0.06169870300072944, 0.04953492200002074, 0.049266653000813676, 0.050643538001168054]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.2078773030007142]
+initial candidates creation time: 2.5168011660007323
+solving times are [0.053946578000250156, 0.06246306899993215, 0.05631870899924252, 0.053368324999610195, 0.054212204999203095, 0.050911242000438506, 0.0490813979995437]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.3155334260009113]
+initial candidates creation time: 2.917974359999789
+solving times are [0.057697393000125885, 0.260663471000953, 0.05651474799924472, 0.04628323900033138, 0.055150795000372455, 0.054706917000657995, 0.05184046300018963]
+
+======
+
+utterance: pls go to the bathroom
+number of initial candidates: 2
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.352231255001243]
+initial candidates creation time: 2.740306194000368
+solving times are [0.05510452999988047, 0.06296447600107058, 0.05948695999904885, 0.05483028900016507, 0.05795736000072793, 0.054407011999501265, 0.0659994519992324]
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.1829189199997927]
+initial candidates creation time: 2.4735640740000235
+solving times are [0.05535992899967823, 0.056444812998961424, 0.07074302000000898, 0.062220734000220546, 0.048656136999852606, 0.04783340500034683, 0.052376753999851644]
+
+======
+
+utterance: plss go to the bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.2828908649989899]
+initial candidates creation time: 2.7057182859989553
+solving times are [0.059620525000354974, 0.06582188100037456, 0.06505013899914047, 0.053688599000452086, 0.05529365099937422, 0.054558353000174975, 0.05851252499996917]
+
+======
+
+utterance: go to the bathroom
+number of initial candidates: 3
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.3305891449999763]
+initial candidates creation time: 2.745898039000167
+solving times are [0.05537755200020911, 0.05208153800049331, 0.08198750100018515, 0.05029098399973009, 0.08525868499964417, 0.05100160700021661, 0.07535471600021992]
+
+======
+
+utterance: go to bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.3951358379999874]
+initial candidates creation time: 2.9276670300005208
+solving times are [0.09589924300053099, 0.05869806999908178, 0.13406491900059336, 0.04655666699909489, 0.06180183499964187, 0.04939566199936962, 0.05118344999937108]
+
+======
+
+utterance: go to bath
+number of initial candidates: 4
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.2900268159992265]
+initial candidates creation time: 2.609376602998964
+solving times are [0.060437156000261893, 0.051993910001328913, 0.049391316999390256, 0.05063011799938977, 0.05687824099913996, 0.04972269600148138, 0.07973923200006539]
+
+======
+
+utterance: eventually at bath
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.2505640950002999]
+initial candidates creation time: 1.9739959489998
+solving times are [0.049705759000062244, 0.056762256999718375, 0.06448717400053283, 0.07611650800026837, 0.10427497400087304]
+
+======
+
+utterance: eventually at bath
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.2785248569998657]
+initial candidates creation time: 1.9026755930008221
+solving times are [0.05563269900085288, 0.06567149300099118, 0.053390239998407196, 0.05401394499858725, 0.05473691200131725]
+
+======
+
+utterance: eventually at batt
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.3216655859996536]
+initial candidates creation time: 2.1107293630011554
+solving times are [0.047283096000683145, 0.06711033100145869, 0.06311942399952386, 0.05389233999994758, 0.10845948399946792]
+
+======
+
+utterance: eventually at baty
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.467179422999834]
+initial candidates creation time: 2.183037652001076
+solving times are [0.0494675219997589, 0.05422884399922623, 0.0850915659993916, 0.06156621799891582, 0.06596238199927029]
+
+======
+
+utterance: eventually at bbat
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.3758446499996353]
+initial candidates creation time: 2.1130107839999255
+solving times are [0.0629635250006686, 0.06473296300100628, 0.06106646099942736, 0.09380947300087428, 0.05727831200056244]
+
+======
+
+utterance: eventually at bbbat
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.3263459549998515]
+initial candidates creation time: 2.1474558070003695
+solving times are [0.07479095400049118, 0.06853376700018998, 0.06592018200171879, 0.06920753099984722, 0.08581941600277787]
+
+======
+
+utterance: eventually at kup
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.1939469000008103]
+initial candidates creation time: 1.8839546459985286
+solving times are [0.07910878399889043, 0.05833952499961015, 0.05436858099892561, 0.05768861700016714, 0.0638153779982531]
+
+======
+
+utterance: eventually at kupp
+
+======
+
+utterance: eventually at kuup
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.2363897369941697]
+initial candidates creation time: 2.067230340995593
+solving times are [0.10657367197563872, 0.07088731802650727, 0.07720892198267393, 0.06749149900861084, 0.07691553499898873]
+
+======
+
+utterance: eventually at [2,1] and also eventually at [1,1]
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [2.7157961729972158]
+initial candidates creation time: 3.7136088630068116
+solving times are [0.072084677987732, 0.08502700200187974, 0.10008542402647436, 0.11494954299996607, 0.12576736399205402]
+
+======
+
+utterance: eventually at [2,1] and also eventually at [1,1]
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.8430333620053716]
+initial candidates creation time: 3.8796180239878595
+solving times are [0.07546100200852379, 0.10335545497946441, 0.0959243880060967, 0.08004954701755196, 0.1034622969746124, 0.11621249202289619, 0.0865824310167227, 0.15605834999587387, 0.1246278960024938, 0.08254370102076791]
+
+======
+
+utterance: eventually at [2,1] and also eventually at [1,3]
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.733216254011495]
+initial candidates creation time: 4.119071471999632
+solving times are [0.08046176302013919, 0.12206365799647756, 0.12677599798189476, 0.09509377900394611, 0.11691047600470483, 0.1467358020017855, 0.08776748197851703, 0.092329614009941, 0.2643928150064312, 0.11326698499033228]
+
+======
+
+utterance: go to [3,4]
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.566554144024849]
+initial candidates creation time: 4.332426265988033
+solving times are [0.07080003200098872, 0.08727542497217655, 0.0935754009988159, 0.09619581801234744, 0.08886813098797575, 0.1298699959879741, 0.09682963401428424, 0.07807158801006153, 0.07640785002149642, 0.08227080400683917]
+
+======
+
+utterance: eventually at [2,1] and also eventually at [1,3]
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.7503425519971643]
+initial candidates creation time: 4.7532970840111375
+solving times are [0.07825629698345438, 0.08664544599014334, 0.12345163899590261, 0.6817690320021939, 0.15775431200745516, 0.07443002998479642, 0.08420419102185406, 0.10169683099957183, 0.0983585370122455, 0.10772449799696915]
+
+======
+
+utterance: eventually at 2,1 and also eventually at 1,3
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.0356032580020837]
+initial candidates creation time: 3.9697313100041356
+solving times are [0.12881438600015827, 0.09221680799964815, 0.08612706599524245, 0.12876288199913688, 0.07866200798889622, 0.0856528599979356, 0.07818800400127657, 0.0979415740002878, 0.07094738999148831, 0.09575445100199431]
+
+======
+
+utterance: eventually at kitc
+number of initial candidates: 8
+number of attempts to get initial candidates: 8
+propositional formula building times are [1.3599046070012264]
+initial candidates creation time: 3.082106225017924
+solving times are [0.0779272929939907, 0.08216413200716488, 0.08992067398503423, 0.19525169298867695, 0.08878778800135478, 0.09208206599578261, 0.07085999500122853, 0.09740795899415389]
+
+======
+
+utterance: eventually at kitch
+number of initial candidates: 4
+number of attempts to get initial candidates: 4
+propositional formula building times are [0.4598101500014309]
+initial candidates creation time: 1.202262217993848
+solving times are [0.023639170016394928, 0.12074127199593931, 0.05061956500867382, 0.04377362999366596]
+
+======
+
+utterance: go to [1,4]
+number of initial candidates: 4
+number of attempts to get initial candidates: 4
+propositional formula building times are [0.6944955640065018]
+initial candidates creation time: 1.168975987995509
+solving times are [0.03329194997786544, 0.048147098015761, 0.05010996799683198, 0.04720370899303816]
+
+======
+
+utterance: go to 1,4
+number of initial candidates: 4
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.6241763540019747]
+initial candidates creation time: 1.0684732490044553
+solving times are [0.035544299986213446, 0.030832411983283237, 0.031442431994946674, 0.030919454991817474, 0.034307983005419374]
+
+======
+
+utterance: eventually at kitch
+number of initial candidates: 4
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.4746681970136706]
+initial candidates creation time: 1.022201401006896
+solving times are [0.026578123011859134, 0.02719977800734341, 0.02753444600966759, 0.024616273993160576, 0.024144591996446252, 0.027800223004305735]
+
+======
+
+utterance: go to bathroom
+number of initial candidates: 2
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.8901962540112436]
+initial candidates creation time: 1.3763273170043249
+solving times are [0.04340418698848225, 0.04978248898987658, 0.04920619499171153, 0.03780738098430447, 0.04400896601146087, 0.04783800302539021]
+
+======
+
+utterance: go to kitch and also go to bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 5
+propositional formula building times are [0.9104307920206338]
+initial candidates creation time: 1.4338673680031206
+solving times are [0.0388979559938889, 0.036225351999746636, 0.03699188897735439, 0.03880503398249857, 0.039869539003120735]
+
+======
+
+utterance: go to bathroom and also go to kitch
+number of initial candidates: 4
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.2252790359780192]
+initial candidates creation time: 2.231589875998907
+solving times are [0.1189648790168576, 0.07601438500569202, 0.07827874200302176, 0.09842369900434278, 0.0692676990001928]
+
+======
+
+utterance: go to kitch and also go to bathroom
+number of initial candidates: 4
+number of attempts to get initial candidates: 5
+propositional formula building times are [1.2571819389995653]
+initial candidates creation time: 2.3013521170069
+solving times are [0.04811677601537667, 0.07266623299801722, 0.1561457589850761, 0.10603967402130365, 0.07132301398087293]
+
+======
+
+utterance: go to kitch and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 6
+propositional formula building times are [2.4579012890171725]
+initial candidates creation time: 3.6299474050174467
+solving times are [0.05569887600722723, 0.12568079499760643, 0.08386471000267193, 0.06915973700233735, 0.0694096660008654, 0.07060060300864279]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 6
+propositional formula building times are [1.2149142929993104]
+initial candidates creation time: 2.4601250650011934
+solving times are [0.051146854006219655, 0.04932667099637911, 0.0471783570246771, 0.14626908997888677, 0.0989931539807003, 0.053513669001404196]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 8
+propositional formula building times are [1.3223835219978355]
+initial candidates creation time: 2.8285032349813264
+solving times are [0.05509511899435893, 0.07109731997479685, 0.06639687597635202, 0.060796604986535385, 0.06268135999562219, 0.07042892699246295, 0.0715280190051999, 0.13228026797878556]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 8
+propositional formula building times are [1.2374067490163725]
+initial candidates creation time: 2.7283907220116816
+solving times are [0.05299635499250144, 0.08042340201791376, 0.08441961198695935, 0.06587789100012742, 0.07313729301677085, 0.09192259499104694, 0.08881839900277555, 0.09485823000431992]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+
+======
+
+utterance: go to kitchen and also go to bathroom
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 7
+propositional formula building times are [1.233956839016173]
+initial candidates creation time: 2.6642332579940557
+solving times are [0.06961138601764105, 0.08888644800754264, 0.09123389498563483, 0.0964284600049723, 0.07730236501083709, 0.0882409309851937, 0.08983123098732904]
+
+======
+
+utterance: go to bathroom and also go to kitchen
+number of initial candidates: 6
+number of attempts to get initial candidates: 8
+propositional formula building times are [1.195954176975647]
+initial candidates creation time: 2.7303240549808834
+solving times are [0.0697328060050495, 0.08290853400831111, 0.07850487501127645, 0.08275023600435816, 0.09299314400414005, 0.0726576579909306, 0.07043868998880498, 0.09302271698834375]
+
+======
+
+utterance: go to bathroom and also go to kitch
+number of initial candidates: 6
+number of attempts to get initial candidates: 8
+propositional formula building times are [1.2567693000019062]
+initial candidates creation time: 2.6506822489900514
+solving times are [0.0698459770064801, 0.1000701779848896, 0.07274395698914304, 0.0741662300133612, 0.07618020399240777, 0.08044629500363953, 0.07765683400793932, 0.06743113801348954]
+
+======
+
+utterance: go to kitch and also go to bathroom
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.4157925600011367]
+initial candidates creation time: 3.076077381003415
+solving times are [0.05872162900050171, 0.07606706200749613, 0.07142532101715915, 0.0733846360235475, 0.07469670899445191, 0.06287321599666029, 0.06796933899750002, 0.07529884300311096, 0.06988860401907004, 0.06451559200650081]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.5179142619890627]
+initial candidates creation time: 5.698204034008086
+solving times are [0.07950569299282506, 0.11498613201547414, 0.12660553501336835, 0.1366581240145024, 0.10174667200772092, 0.12201094400370494, 0.12257280200719833, 0.1343606869922951, 0.11584194799070247, 0.4812987720069941]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.7361408279975876]
+initial candidates creation time: 5.4275874820014
+solving times are [0.10806849598884583, 0.12316014498355798, 0.11512810998829082, 0.14265935300500132, 0.1262716140190605, 0.13857724098488688, 0.12248963399906643, 0.12975730799371377, 0.11752136700670235, 0.1428325420129113]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.7354336729913484]
+initial candidates creation time: 5.163538209017133
+solving times are [0.29269528499571607, 0.11933009297354147, 0.1369931849767454, 0.10576630698051304, 0.09229692700318992, 0.13830081801279448, 0.09660485299536958, 0.0898350999923423, 0.0981945289822761, 0.12823274699621834]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 5
+number of attempts to get initial candidates: 10
+propositional formula building times are [2.8539567870029714]
+initial candidates creation time: 5.494645404978655
+solving times are [0.0945047679997515, 0.11709208300453611, 0.12131422001402825, 0.14856343599967659, 0.11127653901348822, 0.10739694401854649, 0.14637758702156134, 0.13093090301845223, 0.12946639698930085, 0.12888772200676613]
+
+======
+
+utterance: go to kitch and also go to bathroom
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.9067873439926188]
+initial candidates creation time: 3.6407126130070537
+solving times are [0.07149083900731057, 0.07477759598987177, 0.08866680497885682, 0.0763470740057528, 0.06591848100651987, 0.07260716901510023, 0.08991094699013047, 0.07696079701418057, 0.07788428300409578, 0.06650495700887404]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.2993308609875385]
+initial candidates creation time: 3.485083467006916
+solving times are [0.07140868998249061, 0.07595470399246551, 0.10951044200919569, 0.09092367999255657, 0.07009130000369623, 0.09186625498114154, 0.10214677100884728, 0.0857921989809256, 0.0841615250101313, 0.08025274297688156]
+
+======
+
+utterance: go to kitchen and also go to bathroom
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.2449967050051782]
+initial candidates creation time: 4.87288151300163
+solving times are [0.047074668982531875, 0.2631290080025792, 0.3223341749981046, 0.14527159699355252, 0.1587754380016122, 0.09566500599612482, 0.09180418099276721, 0.08916208799928427, 0.09258604800561443, 0.0690268449834548]
+
+======
+
+utterance: step into water and then visit 7,4
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.7547494760365225]
+initial candidates creation time: 5.596270681009628
+solving times are [0.16427078598644584, 0.08427423698594794, 0.09203271102160215, 0.07841303397435695, 0.47684374504024163, 0.41690218599978834, 0.08733900298830122, 0.08644970000023022, 0.10575000901008025, 0.08413441700395197]
+
+======
+
+utterance: step into water and then visit 7,4
+
+======
+
+utterance: step into water and then visit 7,4
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.6974314560065977]
+initial candidates creation time: 3.7670073909685016
+solving times are [0.08368453802540898, 0.08484662097180262, 0.10838134697405621, 0.1519773409818299, 0.09579261898761615, 0.10021757596405223, 0.09542488196166232, 0.08528007700806484, 0.08946320897666737, 0.09341082297032699]
+
+======
+
+utterance: reach 7,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.7409198170062155]
+initial candidates creation time: 3.734763006970752
+solving times are [0.10865502996603027, 0.09246342797996476, 0.08025780197931454, 0.09509976801928133, 0.11353634303668514, 0.09537320799427107, 0.10729790001641959, 0.08069112803786993, 0.09676063701044768, 0.08857812301721424]
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.7376099129905924]
+initial candidates creation time: 3.512915947008878
+solving times are [0.06887257599737495, 0.09614449099171907, 0.08954076399095356, 0.08387963403947651, 0.08511105901561677, 0.09877466002944857, 0.088916418957524, 0.0850170089979656, 0.0838781800121069, 0.08221098902868107]
+
+======
+
+utterance: reach 5,4 but remain dry in the process
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [1.697669748973567]
+initial candidates creation time: 4.078042125038337
+solving times are [0.09099631698336452, 0.11815637297695503, 0.11751042597461492, 0.09773715800838545, 0.08785092597827315, 0.07346243999199942, 0.11883877502987161, 0.3705875820014626, 0.08635912503814325, 0.10355291300220415]
+
+======
+
+utterance: bring one green circle from 7,4 to 5,4
+number of initial candidates: 4
+number of attempts to get initial candidates: 10
+propositional formula building times are [9.028582240978722]
+initial candidates creation time: 26.173658233019523
+solving times are [0.7196217510499991, 0.6142881769919768, 0.8353891330189072, 0.3475592979812063, 0.46271696098847315, 1.7175241059740074, 1.5628861089935526, 1.1772584419813938, 0.4746696740039624, 0.32714109000517055]
+was not able to disambiguate between before(pick_one_green_circle_item_at_7_4,at_5_4) and before(at_7_4,before(pick_one_green_circle_item_at_7_4,at_5_4)). Removing before(at_7_4,before(pick_one_green_circle_item_at_7_4,at_5_4))
+
+======
+
+utterance: take all green from [7,4] to water
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [14.941444721014705]
+initial candidates creation time: 31.372993457014672
+solving times are [0.6589863109984435, 0.779183036996983, 1.4750954500050284, 1.4497024169540964, 0.7070373249589466, 0.4508869889541529, 0.6406457309494726, 0.8866627520183101, 0.8281910239602439, 1.5359995620092377]
+
+======
+
+utterance: take every green from 7,4 to water
+number of initial candidates: 7
+number of attempts to get initial candidates: 10
+propositional formula building times are [12.07687635201728]
+initial candidates creation time: 31.45325027103536
+solving times are [0.47153462702408433, 0.3528494729544036, 0.7902435050345957, 0.890200849971734, 2.175148071954027, 2.366348729003221, 1.0413562579778954, 1.6163316919701174, 1.114806666970253, 1.15032733802218]
+was not able to disambiguate between before(pick_every_green_x_item_at_7_4,neg(at_dry)) and before(at_7_4,before(pick_every_green_x_item_at_7_4,neg(at_dry))). Removing before(at_7_4,before(pick_every_green_x_item_at_7_4,neg(at_dry)))
+
+======
+
+utterance: first get one red item from 7,4 and afterwards one green item from 10,8
+number of initial candidates: 6
+number of attempts to get initial candidates: 10
+propositional formula building times are [17.02418662898708]
+initial candidates creation time: 35.531628865981475
+solving times are [1.4575974509934895, 0.8540577500243671, 1.0886061929631978, 0.8653995149652474, 0.8610688649932854, 1.3054683020454831, 1.36090743803652, 0.6841117960284464, 0.9419236180256121, 1.282531453995034]
+was not able to disambiguate between before(pick_one_red_x_item_at_7_4,before(at_10_8,pick_one_green_x_item_at_10_8)) and before(pick_one_red_x_item_at_7_4,pick_one_green_x_item_at_10_8). Removing before(pick_one_red_x_item_at_7_4,before(at_10_8,pick_one_green_x_item_at_10_8))
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+
+======
+
+utterance: gett me one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [6.773109328001738]
+solving times are [0.2996789640164934, 0.2918710910016671, 0.2333996639936231, 0.2974309549899772, 0.30294841702561826, 0.2500312580377795]
+
+======
+
+utterance: go get me one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [22.320622506027576]
+solving times are [0.3498574789846316, 0.28084253100678325, 0.20181466499343514, 0.29880108195357025, 0.3319467359688133, 0.25157168903388083]
+
+======
+
+utterance: goo one red 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.883867121010553]
+solving times are [0.297280305007007, 0.29079836001619697, 0.2588488460169174, 0.21437494998099282, 0.3199281300185248, 0.23604152497136965]
+
+======
+
+utterance: go one red 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.100724585005082]
+solving times are [0.28710183600196615, 0.2949835170293227, 0.20952012995257974, 0.2965259790071286, 0.31075213599251583, 0.21493382204789668]
+
+======
+
+utterance: goho one red 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.04334364895476]
+solving times are [0.3241813450003974, 0.3047806420363486, 0.30764824099605903, 0.20915059896651655, 0.23730207700282335, 0.22271693695802242]
+
+======
+
+utterance: get me two circle 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [8.522264742990956]
+solving times are [0.6034299709717743, 0.4206396699883044, 0.9995884780073538, 0.58662782702595, 0.880597052979283]
+was not able to disambiguate between eventually(pick_two_x_circle_item_at_7_4) and and(eventually(pick_two_x_circle_item_at_7_4),->(pick_two_x_circle_item_at_7_4,at_7_4)). Removing and(eventually(pick_two_x_circle_item_at_7_4),->(pick_two_x_circle_item_at_7_4,at_7_4))
+was not able to disambiguate between eventually(pick_two_x_circle_item_at_7_4) and and(eventually(at_7_4),eventually(pick_two_x_circle_item_at_7_4)). Removing and(eventually(at_7_4),eventually(pick_two_x_circle_item_at_7_4))
+
+======
+
+utterance: woho one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [4.595507208025083]
+solving times are [0.530059958982747, 0.27887950994772837, 0.2530959749710746, 0.21841926500201225, 0.2484170010429807, 0.224003954033833]
+
+======
+
+utterance: woho one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [6.824215901957359]
+solving times are [0.3222520599956624, 0.4220060560037382, 0.36696807004045695, 0.2753141960129142, 0.47407381696393713, 0.37498732801759616]
+
+======
+
+utterance: woho one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 7
+propositional formula building times are [6.009736345033161]
+solving times are [0.23077143996488303, 0.3866158150485717, 0.18063856498338282, 0.26746723300311714, 0.2637426989967935, 1.3959668580209836, 1.1512227730127051]
+
+======
+
+utterance: woho one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.287326026998926]
+solving times are [0.3257197300554253, 0.31672128004720435, 0.3052629560115747, 0.27257733297301456, 0.2583320349804126, 0.24914279801305383]
+
+======
+
+utterance: whh get me one red 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [4.785482201026753]
+solving times are [0.18925282900454476, 0.2850056810420938, 0.6594498860067688, 0.2681162189692259, 0.22986133099766448]
+was not able to disambiguate between eventually(pick_one_red_x_item_at_7_4) and ->(->(pick_one_red_x_item_at_7_4,at_7_4),eventually(pick_one_red_x_item_at_7_4)). Removing ->(->(pick_one_red_x_item_at_7_4,at_7_4),eventually(pick_one_red_x_item_at_7_4))
+
+======
+
+utterance: woho one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [5.510520200012252]
+solving times are [0.756711621012073, 0.31644891400355846, 0.2917073990101926, 0.3793631130247377, 0.5352785130380653, 0.25350483699003235]
+
+======
+
+utterance: get one red from 7,4
+
+======
+
+utterance: get one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [4.892019048000293]
+solving times are [0.3124877889995332, 0.27958920699984446, 0.2526410020000185, 0.20743504999973084, 0.21806234099949506, 0.21175159199992777]
+
+======
+
+utterance: visit dry
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.9088850899997851]
+solving times are [0.0535933280007157, 0.08783316999961244, 0.083781946000272, 0.07823922700026742, 0.08084058199983701, 0.11145258699980332]
+
+======
+
+utterance: visit water
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [0.660337356999662]
+solving times are [0.032373826000366535, 0.03641317099936714, 0.035798280000562954, 0.05776719299956312, 0.03995184599989443, 0.03897440299988375]
+was not able to disambiguate between until(at_dry,neg(at_dry)) and eventually(neg(at_dry)). Removing until(at_dry,neg(at_dry))
+
+======
+
+utterance: get me one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 5
+propositional formula building times are [4.315990008999506]
+solving times are [0.23038583600100537, 0.23028737400090904, 0.19730037199951767, 0.18646606099900964, 0.20284510100100306]
+was not able to disambiguate between ->(->(pick_one_red_x_item_at_7_4,at_7_4),eventually(pick_one_red_x_item_at_7_4)) and or(eventually(pick_one_red_x_item_at_7_4),until(at_7_4,pick_one_red_x_item_at_7_4)). Removing or(eventually(pick_one_red_x_item_at_7_4),until(at_7_4,pick_one_red_x_item_at_7_4))
+was not able to disambiguate between ->(->(pick_one_red_x_item_at_7_4,at_7_4),eventually(pick_one_red_x_item_at_7_4)) and eventually(pick_one_red_x_item_at_7_4). Removing ->(->(pick_one_red_x_item_at_7_4,at_7_4),eventually(pick_one_red_x_item_at_7_4))
+
+======
+
+utterance: get one item from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 8
+propositional formula building times are [2.24108797199915]
+solving times are [0.10675422399981471, 0.11236044999895967, 0.11715148800067254, 0.12933789199996681, 0.13011109699982626, 0.10280149199934385, 0.11898495199966419, 0.1152981870000076]
+
+======
+
+utterance: get mee one red from 7,4
+number of initial candidates: 5
+number of attempts to get initial candidates: 6
+propositional formula building times are [4.84963331399922]
+solving times are [0.38602972599619534, 0.46859789500012994, 0.6450068830017699, 0.3079487479990348, 0.29315178300021216, 0.2167530969963991]

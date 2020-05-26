@@ -1,0 +1,42 @@
+'(F (wet U dry))',                  : makes sense, identified the range where the sequence of wet was followed by dry in the end  **********   [ but also trivially true in the last timestep]
+'(wet U (F dry))',                  : doesn't make sense because the closing clause of until is true at the beginning
+'((F wet) U dry)',                  : doesn't make sense: the opening clause of until is true all the time until the last moment
+'((F dry) U wet)',                  : no sense, opening part is always true
+'(F dry)',                          : makes sense, but does not give much info  ********************
+'((G dry) U (F dry))',              : no sense, closing part is immediately true (so at the beginning could stand anything)
+'(F (dry & (G dry)))',              : no sense, only uses the fact that dry is true at the very end
+'(F (dry U (G dry)))',              : not much sense, refers to the last timestep
+'(F (dry & (F dry)))',              : the same here
+'((dry & (F dry)) U (F dry))',      : closing part is true immediately
+'(G ((F wet) U dry))',              : opening part of until is true everywhere except for the last timestep
+'(F ((G wet) U dry))',              : trivially true in the last timestep
+'(F ((dry & wet) U dry))',          : the same, last timestep
+'(F ((dry U wet) U dry))',          : the same, last timestep
+'(F ((F wet) U dry))'               : the same, last timestep
+
+
+
+for the spec
+
+{
+  "literals": [
+    "wet",
+    "dry",
+    "noise"
+  ],
+  "positive": [
+    "noise; noise;wet,noise; wet; wet; dry"
+  ],
+  "number-of-formulas": 20,
+  "max-depth-of-formula": 10,
+  "operators": [
+    "F",
+    encodingConstants.G,
+    "&",
+    "U"
+  ],
+  "hints": [
+    ["wet", 10],
+    ["dry", 10]
+  ]
+}

@@ -1,0 +1,40 @@
+'((F goal2) U goal1)',              : refers to Fgoal2 which is true, but goal2 itself wouldn't be satisfied by goal1
+'(goal1 U (F goal2))',              : Fgoal2 is always true, anything could stand at the opening part
+'(F (goal1 U goal2))',              : this is also only true because of the last one
+'((F goal2) U dry)',                : Fgoal2 always true so the only thing that matters is that it is 'wet' / 'dry' at least once
+'((F goal2) U wet)',                : Fgoal2 always true so the only thing that matters is that it is 'wet' / 'dry' at least once
+'(G (F (goal1 U goal2)))',          : complicated way of saying the simple thing once again: goal2 is true in the end
+'(G (goal1 U (F goal2)))',          : complicated way of saying the simple thing once again: goal2 is true in the end
+'(F (G (goal1 U goal2)))',          : complicated way of saying the simple thing once again: goal2 is true in the end
+'(F (goal1 & (F goal2)))',          : this one says: goal1 should happen and afterwards goal2 should happen. makes sense ***************
+'(F (goal2 & (goal1 U goal2)))', 
+'((goal1 U (F goal2)) U dry)', 
+'((F (goal1 U goal2)) U dry)', 
+'((goal1 U (F dry)) U goal2)', 
+'((goal1 U (F goal2)) U goal2)', 
+'((F (goal1 U dry)) U goal2)'
+
+for the spec
+
+{
+  "literals": [
+    "wet",
+    "dry",
+    "goal1",
+    "goal2",
+    "noise"
+  ],
+  "positive": [
+    "noise; noise, goal1;wet,noise; wet; wet; dry, goal2"
+  ],
+  "operators": [
+    "F",
+    encodingConstants.G,
+    "&",
+    "U"
+  ],
+  "hints": [
+    ["goal1", 10],
+    ["goal2", 10]
+  ]
+}

@@ -1,0 +1,10 @@
+data
+debug_files
+testLibraries.sh
+debug_models
+*.csv
+*.ods
+*.idea
+.cache
+.DS_Store
+__pycache__
