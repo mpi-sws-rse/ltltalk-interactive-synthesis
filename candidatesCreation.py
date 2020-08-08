@@ -57,7 +57,7 @@ def create_candidates(nl_utterance, examples, testing=False, num_formulas=None, 
     negative_traces = [Trace.create_trace_from_events_list(derived_events, literals_to_consider=literals)
                        for derived_events in collection_of_negative]
 
-    traces = ExperimentTraces(tracesToAccept=emitted_traces, tracesToReject=negative_traces, hints=hintsWithLocations,)
+    traces = ExperimentTraces(tracesToAccept=emitted_traces, tracesToReject=negative_traces, hints=hintsWithLocations)
 
     hints_report = ["{} --> {}".format(k, hintsWithLocations[k]) for k in hintsWithLocations]
     stats_log.debug("hints: \n\t{}".format("\n\t".join(hints_report)))
