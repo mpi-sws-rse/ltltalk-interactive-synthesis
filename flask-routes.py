@@ -7,8 +7,6 @@ from flask import make_response
 from flask_cors import CORS
 import json
 import os
-print(os.path)
-print(sys.path)
 from world import World
 from candidatesCreation import create_candidates, update_candidates, create_disambiguation_example, \
     create_path_from_formula
