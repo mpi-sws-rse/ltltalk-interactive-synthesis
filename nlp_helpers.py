@@ -7,10 +7,14 @@ import pdb
 import logging
 
 
-
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-
+try:
+    from nltk.tokenize import word_tokenize
+    from nltk.stem import WordNetLemmatizer
+except:
+    pdb.set_trace()
+    nltk.download('wordnet')
+    from nltk.tokenize import word_tokenize
+    from nltk.stem import WordNetLemmatizer
 
 
 def get_locations_from_utterance(nl_utterance):
