@@ -5,7 +5,7 @@ if not os.path.exists("logs"):
     os.makedirs("logs")
 
 stats_log = logging.getLogger('stats_logger')
-stats_log.setLevel(logging.DEBUG)
+stats_log.setLevel(logging.INFO)
 
 fh = logging.FileHandler('logs/stats.log')
 fh.setLevel(logging.INFO)

@@ -129,8 +129,8 @@ of individual subwords. --->  SHOULD BE REPLACED BY SOMETHING BETTER
     for hint in hints:
 
         if hint == constants.DRY:
-            # heuristically, dry gets less value so we are pumping it up artificially
-            hintsWithLocations[hint] = 1 + hints[hint]
+            
+            hintsWithLocations[hint] = hints[hint]
 
             continue
         if hint in constants.OPERATORS or hint in constants.AT_SPECIAL_LOCATION_EVENTS:
@@ -152,5 +152,8 @@ of individual subwords. --->  SHOULD BE REPLACED BY SOMETHING BETTER
 
     hintsWithLocations = filter_hints_with_emitted_events(hintsWithLocations, emitted_events_seq)
     hintsWithLocations.update(atLocationsHints)
+    
+    if constants.DRY in hintsWithLocations:
+        hintsWithLocations[constants.DRY] = hintsWithLocations[constants.DRY] + 1
 
     return hintsWithLocations
