@@ -4,7 +4,6 @@ import os
 import json
 import pdb
 import time
-
 from world import World
 from encoding.utils.SimpleTree import Formula
 import requests

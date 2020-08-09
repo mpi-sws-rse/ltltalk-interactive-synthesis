@@ -154,7 +154,7 @@ class ExperimentTraces:
     def __init__(self, tracesToAccept=None, tracesToReject=None,
                  operators=[encodingConstants.G, encodingConstants.F, encodingConstants.LNOT, encodingConstants.UNTIL,
                             encodingConstants.LAND, encodingConstants.LOR, encodingConstants.IMPLIES,
-                            encodingConstants.X, encodingConstants.BEFORE],
+                            encodingConstants.X, encodingConstants.STRICTLY_BEFORE],
                  depth=None, possibleSolution=None, hints=None, literals=None):
 
         if tracesToAccept != None:
