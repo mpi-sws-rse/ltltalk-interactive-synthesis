@@ -4,6 +4,8 @@ import os
 import json
 import pdb
 import time
+import sys
+
 
 from world import World
 from encoding.utils.SimpleTree import Formula
@@ -357,7 +359,7 @@ def main():
 
         for test_filename in all_files:
 
-            with open(test_filename) as test_file:
+            with open(test_filename.path) as test_file:
                 test_def = json.load(test_file)
                 for num_init_candidates in args.numInitCandidates:
 
