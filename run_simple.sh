@@ -1,1 +1,0 @@
-python experiments/interaction_experiment.py --tests_definition_folder=experiments/playground  --num_repetitions=1 --max_depth 4 --num_init_candidates 5 --output=singleEx.csv --optimizer_criterion=pareto --num_examples=1

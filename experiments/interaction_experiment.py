@@ -317,6 +317,7 @@ def main():
 
     parser.add_argument("--tests_definition_folder", dest="testsFolder")
     parser.add_argument("--output", dest="statsOutput", default="stats.csv")
+    parser.add_argument("--condensed_output", dest="statsCondensedOutput", default="condensedStats.csv")
     parser.add_argument("--num_repetitions", dest="numRepetitions", type=int, default=1)
     parser.add_argument("--num_examples", dest="numExamples", type=int, default=None)
     parser.add_argument("--num_init_candidates", dest="numInitCandidates", nargs='+', type=int, default=[3, 6, 10])
@@ -342,55 +343,84 @@ def main():
     else:
         use_hints = True
 
+    condensed_headers = ["task id", "formula found", "overall waiting time", "number of interactions",
+                         "candidates generation waiting time"]
+
     with open(args.statsOutput, statsOpeningMode) as csv_stats:
-        headers = HEADERS
-        writer = csv.DictWriter(csv_stats, fieldnames=headers)
-        tests_already_covered = []
+        with open(args.statsCondensedOutput, statsOpeningMode) as condensed_stats_file:
+            condensed_writer = csv.DictWriter(condensed_stats_file, fieldnames=condensed_headers)
+            condensed_writer.writeheader()
+            headers = HEADERS
+            writer = csv.DictWriter(csv_stats, fieldnames=headers)
+            tests_already_covered = []
 
-        if args.continueTest:
-            with open(args.statsOutput) as csv_read_stats:
-                reader = csv.DictReader(csv_read_stats)
+            if args.continueTest:
+                with open(args.statsOutput) as csv_read_stats:
+                    reader = csv.DictReader(csv_read_stats)
 
-                tests_already_covered = [row[TEST_ID_HEADER] for row in reader]
-        else:
+                    tests_already_covered = [row[TEST_ID_HEADER] for row in reader]
+            else:
 
-            writer.writeheader()
-        all_files = sorted(os.scandir(directory), key= lambda dir_entry: dir_entry.name)
+                writer.writeheader()
+            all_files = sorted(os.scandir(directory), key= lambda dir_entry: dir_entry.name)
 
-        for test_filename in all_files:
+            for test_filename in all_files:
 
-            with open(test_filename.path) as test_file:
-                test_def = json.load(test_file)
-                for num_init_candidates in args.numInitCandidates:
+                with open(test_filename.path) as test_file:
+                    test_def = json.load(test_file)
+                    number_of_times_formula_is_found = 0
+                    individual_overall_durations = []
+                    individual_number_of_interactions = []
+                    individual_formula_generation_waiting_times = []
+                    for num_init_candidates in args.numInitCandidates:
 
-                    for max_depth in args.maxDepth:
-                        for rep in range(args.numRepetitions):
+                        for max_depth in args.maxDepth:
+                            for rep in range(args.numRepetitions):
 
-                            main_log.info(
-                                "testing {}, for max {} candidates, max depth {}, repetition {}".format(
-                                    test_filename.name, num_init_candidates, max_depth, rep))
-                            test_id = test_filename.name + str(num_init_candidates) + str(max_depth) + str(rep)
-                            if not test_id in tests_already_covered:
-                                try:
-                                    stats = flipper_session(test_def, max_num_init_candidates=num_init_candidates,
-                                                            questions_timeout=args.questionsTimeout,
-                                                            candidates_timeout=args.candidatesTimeout, test_id=test_id,
-                                                            max_depth=max_depth, criterion=args.optimizerCriterion,
-                                                            num_examples=args.numExamples, use_hints=use_hints)
-                                except Exception as e:
-                                    stats = {}
-                                    for h in HEADERS:
-                                            stats[h] = "unknown error"
-                                    main_log.error("Failed with the exception {}".format(e))
+                                main_log.info(
+                                    "testing {}, for max {} candidates, max depth {}, repetition {}".format(
+                                        test_filename.name, num_init_candidates, max_depth, rep))
+                                test_id = test_filename.name + str(num_init_candidates) + str(max_depth) + str(rep)
+                                test_name = test_filename.name.split(".")[0]
+                                if not test_id in tests_already_covered:
+                                    try:
+                                        stats = flipper_session(test_def, max_num_init_candidates=num_init_candidates,
+                                                                questions_timeout=args.questionsTimeout,
+                                                                candidates_timeout=args.candidatesTimeout, test_id=test_id,
+                                                                max_depth=max_depth, criterion=args.optimizerCriterion,
+                                                                num_examples=args.numExamples, use_hints=use_hints)
+                                    except Exception as e:
+                                        stats = {}
+                                        for h in HEADERS:
+                                                stats[h] = "unknown error"
+                                        main_log.error("Failed with the exception {}".format(e))
 
 
-                                stats[TEST_ID_HEADER] = test_id
-                                writer.writerow(stats)
-                                main_log.info("\n")
-                                time.sleep(10)
+                                    if stats['formula_is_found'] is True:
+                                        number_of_times_formula_is_found += 1
+                                    formulas_generation_time = stats['initial_candidates_generation_time'][0]
+                                    individual_formula_generation_waiting_times.append(formulas_generation_time)
+                                    overall_time = formulas_generation_time  + stats['num_questions_asked'] * stats['average_disambiguation_duration']
+                                    individual_overall_durations.append(overall_time)
+                                    individual_number_of_interactions.append(stats['num_questions_asked'])
+
+
+                                    stats[TEST_ID_HEADER] = test_id
+                                    writer.writerow(stats)
+                                    main_log.info("\n")
+                                    time.sleep(10)
+                            condensed_stats = {"task id": test_name, "formula found":number_of_times_formula_is_found,
+                                               "overall waiting time":avg(individual_overall_durations),
+                                               "number of interactions":avg(individual_number_of_interactions),
+                                               "candidates generation waiting time": avg(individual_formula_generation_waiting_times)}
+
+                            condensed_writer.writerow(condensed_stats)
+
+
 
             main_log.info("\n\n===\n\n")
 
-
+def avg(l):
+    return sum(l) / len(l)
 if __name__ == '__main__':
     main()

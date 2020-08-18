@@ -47,7 +47,7 @@ def create_candidates(nl_utterance, examples, testing=False, num_formulas=None, 
 
     t.tic()
 
-    if constants.USE_HINTS is False:
+    if use_hints is False:
         hintsWithLocations = {}
     else:
         hintsWithLocations = nlp_helpers.get_hints_from_utterance(nl_utterance, pickup_locations, all_locations, emitted_events_seq)

@@ -78,6 +78,7 @@ def candidate_spec():
             use_hints = True if use_hints == "True" else False
         else:
             use_hints = True
+        print("use hints is set to {}".format(use_hints))
 
         world_1 = World(examples[0]["context"], json_type=2)
         wall_locations = world_1.get_wall_locations()
