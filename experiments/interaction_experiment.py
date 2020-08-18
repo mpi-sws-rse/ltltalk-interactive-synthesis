@@ -343,7 +343,7 @@ def main():
     else:
         use_hints = True
 
-    condensed_headers = ["task id", "formula found", "overall waiting time", "number of interactions",
+    condensed_headers = ["task id", "depth", "num initial candidates", "formula found", "overall waiting time", "number of interactions",
                          "candidates generation waiting time"]
 
     with open(args.statsOutput, statsOpeningMode) as csv_stats:
@@ -400,9 +400,18 @@ def main():
                                         number_of_times_formula_is_found += 1
                                     formulas_generation_time = stats['initial_candidates_generation_time'][0]
                                     individual_formula_generation_waiting_times.append(formulas_generation_time)
-                                    overall_time = formulas_generation_time  + stats['num_questions_asked'] * stats['average_disambiguation_duration']
+                                    if stats["num_questions_asked"] == "/":
+                                        question_waiting_time = 0
+                                    else:
+                                        question_waiting_time = stats['num_questions_asked'] * stats['average_disambiguation_duration']
+
+                                    overall_time = formulas_generation_time  + question_waiting_time
                                     individual_overall_durations.append(overall_time)
-                                    individual_number_of_interactions.append(stats['num_questions_asked'])
+                                    if stats['num_questions_asked'] == "/":
+                                        num_questions_asked = 0
+                                    else:
+                                        num_questions_asked = stats['num_questions_asked']
+                                    individual_number_of_interactions.append(num_questions_asked)
 
 
                                     stats[TEST_ID_HEADER] = test_id
@@ -412,7 +421,9 @@ def main():
                             condensed_stats = {"task id": test_name, "formula found":number_of_times_formula_is_found,
                                                "overall waiting time":avg(individual_overall_durations),
                                                "number of interactions":avg(individual_number_of_interactions),
-                                               "candidates generation waiting time": avg(individual_formula_generation_waiting_times)}
+                                               "candidates generation waiting time": avg(individual_formula_generation_waiting_times),
+                                               "depth": max_depth,
+                                               "num initial candidates": num_init_candidates}
 
                             condensed_writer.writerow(condensed_stats)
 
@@ -422,5 +433,6 @@ def main():
 
 def avg(l):
     return sum(l) / len(l)
+
 if __name__ == '__main__':
     main()

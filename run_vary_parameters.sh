@@ -1,0 +1,3 @@
+python experiments/interaction_experiment.py --tests_definition_folder=experiments/multiple_examples_experiment_worlds  --num_repetitions=5 --max_depth 1 3 5 7 --num_init_candidates 2 3 4 5 6 --condensed_output=condensedResultsVaryingParameters.csv --output=resultsVaryingParameters.csv --optimizer_criterion=pareto --num_examples=1
+
+#python experiments/interaction_experiment.py --tests_definition_folder=experiments/playground  --num_repetitions=2 --max_depth 1 4 --num_init_candidates 2 6 --condensed_output=condensedResultsVaryingParameters.csv --output=resultsVaryingParameters.csv --optimizer_criterion=pareto --num_examples=1
