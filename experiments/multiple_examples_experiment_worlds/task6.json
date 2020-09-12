@@ -1,7 +1,7 @@
 {
-  "description": "get one item from [1,2] and one from [3,1] and in the process never step on a water tile",
-  "target-formula": "and(until(at_dry,pick_one_x_x_item_at_3_1), before(pick_one_x_triangle_item_at_1_2,pick_one_x_x_item_at_3_1))",
-  "expected-hints": ["at_1_2", "at_3_1", "at_dry"],
+  "description": "get one item from [1,2] and one from [3,1]",
+  "target-formula": "and(eventually(pick_one_x_x_item_at_1_2), eventually(pick_one_x_x_item_at_3_1))",
+  "expected-hints": ["at_1_2", "at_3_1"],
   "examples": [
     {
       "init-path": [
