@@ -77,7 +77,7 @@ main_log.addHandler(fh)
 # ch.setLevel(logging.DEBUG)
 # main_log.addHandler(ch)
 
-def sanity_check(path, w, f):
+def sanity_check(path, w, f, no_excessive_trace=True, no_excessive_effort=True):
     world = copy.deepcopy(w)
     try:
         (emitted_events, _, _, _) = world.execute_and_emit_events(path)
@@ -95,7 +95,8 @@ def sanity_check(path, w, f):
 
 
 def flipper_session(test_def, max_num_init_candidates, criterion, questions_timeout, candidates_timeout,
-                    max_depth, test_id=TEST_SESSION_ID, use_hints=True, num_examples=None):
+                    max_depth, test_id=TEST_SESSION_ID, use_hints=True, num_examples=None,
+                    noExcessiveTrace=True, noExcessiveEffort=True):
     stats = {}
     server_num_disambiguations = 0
     server_disambiguations_stats = []
@@ -123,6 +124,8 @@ def flipper_session(test_def, max_num_init_candidates, criterion, questions_time
     candidate_spec_payload["max-depth"] = max_depth
 
     candidate_spec_payload["use-hints"] = use_hints
+    candidate_spec_payload["no-excessive-trace-principle"] = noExcessiveTrace
+    candidate_spec_payload["no-excessive-effort-principle"] = noExcessiveEffort
     candidate_spec_payload["optimizer-criterion"] = json.dumps(criterion)
 
 
@@ -139,7 +142,7 @@ def flipper_session(test_def, max_num_init_candidates, criterion, questions_time
         world_s = World(ex["context"], json_type=2)
         f_s = target_formula
         path_s = ex["init-path"]
-        if not sanity_check(path_s, world_s, target_formula):
+        if not sanity_check(path_s, world_s, target_formula, no_excessive_effort=noExcessiveEffort,no_excessive_trace=noExcessiveTrace):
             pdb.set_trace()
             raise ValueError("test is not correct")
 
@@ -324,6 +327,9 @@ def main():
     parser.add_argument("--max_depth", dest="maxDepth", type=int, nargs='+', default=[2, 3, 4])
     parser.add_argument("--continue_test", dest="continueTest", action='store_true', default=False)
     parser.add_argument("--no_hints", dest="notUseHints", action='store_true', default=False)
+    parser.add_argument("--exclude_no_excessive_trace_principle", dest="excludeNoExcessiveTracePrinciple", action='store_true', default=False)
+    parser.add_argument("--exclude_no_excessive_effort_principle", dest="excludeNoExcessiveEffortPrinciple", action='store_true',
+                        default=False)
     parser.add_argument("--candidates_timeout", dest="candidatesTimeout", type=int,
                         default=CANDIDATES_GENERATION_TIMEOUT)
     parser.add_argument("--questions_timeout", dest="questionsTimeout", type=int,
@@ -382,13 +388,25 @@ def main():
                                         test_filename.name, num_init_candidates, max_depth, rep))
                                 test_id = test_filename.name + str(num_init_candidates) + str(max_depth) + str(rep)
                                 test_name = test_filename.name.split(".")[0]
+                                if args.excludeNoExcessiveTracePrinciple is True:
+                                    noExcessiveTrace = False
+                                else:
+                                    noExcessiveTrace = True
+
+                                if args.excludeNoExcessiveEffortPrinciple is True:
+                                    noExcessiveEffort = False
+                                else:
+                                    noExcessiveEffort = True
+
                                 if not test_id in tests_already_covered:
                                     try:
                                         stats = flipper_session(test_def, max_num_init_candidates=num_init_candidates,
                                                                 questions_timeout=args.questionsTimeout,
                                                                 candidates_timeout=args.candidatesTimeout, test_id=test_id,
                                                                 max_depth=max_depth, criterion=args.optimizerCriterion,
-                                                                num_examples=args.numExamples, use_hints=use_hints)
+                                                                num_examples=args.numExamples, use_hints=use_hints,
+                                                                noExcessiveTrace=noExcessiveTrace,
+                                                                noExcessiveEffort=noExcessiveEffort)
                                     except Exception as e:
                                         stats = {}
                                         for h in HEADERS:

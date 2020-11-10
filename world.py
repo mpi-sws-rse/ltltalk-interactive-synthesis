@@ -237,7 +237,7 @@ class World:
 
         return num_items
 
-    def execute_and_emit_events(self, sequence_of_actions):
+    def execute_and_emit_events(self, sequence_of_actions, no_excessive_trace=True, no_excessive_effort=True):
 
         new_sequence_of_actions = []
         for event, next_event in zip(sequence_of_actions, sequence_of_actions[1:]):
@@ -273,7 +273,8 @@ class World:
 
 
 
-
+        logging.warning("for sequence of actions: {}".format(sequence_of_actions))
+        list_of_forked_events = []
         for idx, action in enumerate(sequence_of_actions):
 
             action_events = []
@@ -316,8 +317,11 @@ class World:
                 """
                 here I'd like to exclude one item from the set of picked items and emit those events as negative events.
                 The assumption is that if any picking was unnecessary, the user would not do it at all
+                In the paper, this is the N0_EXCESSIVE_EFFORT principle
             
                 """
+
+
                 for item_desc in list_of_items:
                     modified_collection = list_of_items.copy()
                     modified_collection.remove(item_desc)
@@ -326,7 +330,10 @@ class World:
                     speculative_action_events = self._get_action_events(events, old_field_items, speculative_new_field_items, self.robot_position)
                     forked_events = events.copy()
                     forked_events.append(speculative_action_events)
-                    collection_of_negative_events.append(forked_events)
+                    if no_excessive_effort is True:
+                        collection_of_negative_events.append(forked_events)
+                    else:
+                        logging.warning("not adding {} to negative due to no excessive effort".format(forked_events))
 
             # merge position events to the next pick action (they will be mentioned there)
             # I am not sure why this was necessary. At the moment it doesn't seem to be, commenting out
@@ -335,7 +342,15 @@ class World:
             #             continue
 
             events.append(action_events)
-        collection_of_negative_events.append(events[:-1])
+        """
+        here we are adding a prefix (all but the last) 
+        to the set events. in the paper, this is called
+        NO_EXCESSIVE_TRACE
+        """
+        if no_excessive_trace is True:
+            collection_of_negative_events.append(events[:-1])
+        else:
+            logging.warning("not adding {} to negative due to no excessive trace principle".format(events[:-1]))
 
         return (events, pickup_locations, collection_of_negative_events, all_locations)
 

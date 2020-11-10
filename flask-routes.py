@@ -59,6 +59,7 @@ def hello_world():
 
 @app.route('/get-candidate-spec')
 def candidate_spec():
+
     #try:
         stats_log.info("\n======\n")
         answer = {}
@@ -79,6 +80,20 @@ def candidate_spec():
         else:
             use_hints = True
         print("use hints is set to {}".format(use_hints))
+
+
+        if "no-excessive-trace-principle" in request.args:
+            no_excessive_trace = request.args.get("no-excessive-trace-principle")
+            no_excessive_trace = True if no_excessive_trace == "True" else False
+        else:
+            no_excessive_trace = True
+
+
+        if "no-excessive-effort-principle" in request.args:
+            no_excessive_effort = request.args.get("no-excessive-effort-principle")
+            no_excessive_effort = True if no_excessive_effort == "True" else False
+        else:
+            no_excessive_effort = True
 
         world_1 = World(examples[0]["context"], json_type=2)
         wall_locations = world_1.get_wall_locations()
@@ -101,7 +116,9 @@ def candidate_spec():
                                                                                                        id=sessionId,
                                                                                                        max_depth=max_depth,
                                                                                                        criterion=criterion,
-                                                                                                       use_hints=use_hints)
+                                                                                                       use_hints=use_hints,
+                                                                                                       no_excessive_effort=no_excessive_effort,
+                                                                                                       no_excessive_trace=no_excessive_trace)
 
         answer["num_attempts"] = num_attempts
         answer["candidates_generation_time"] = candidates_generation_time

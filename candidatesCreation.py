@@ -20,7 +20,7 @@ from z3 import *
 
 
 def create_candidates(nl_utterance, examples, testing=False, num_formulas=None, id=None, max_depth=None, criterion=None,
-                      use_hints=True):
+                      use_hints=True, no_excessive_trace = True, no_excessive_effort=True):
     t = TicToc()
     emitted_events_seq = []
     collection_of_negative = []
@@ -34,9 +34,10 @@ def create_candidates(nl_utterance, examples, testing=False, num_formulas=None, 
         context = ex["context"]
         path = ex["init-path"]
         test_world = World(context, json_type=2)
+
         (emitted_events, pickup_locations_ex, collection_of_negative_ex,
          all_locations_ex) = test_world.execute_and_emit_events(
-            path)
+            path, no_excessive_effort=no_excessive_effort, no_excessive_trace=no_excessive_trace)
         emitted_events_seq.append(emitted_events)
         collection_of_negative += collection_of_negative_ex
         pickup_locations += pickup_locations_ex
@@ -59,10 +60,12 @@ def create_candidates(nl_utterance, examples, testing=False, num_formulas=None, 
     negative_traces = [Trace.create_trace_from_events_list(derived_events, literals_to_consider=literals)
                        for derived_events in collection_of_negative]
 
+
     traces = ExperimentTraces(tracesToAccept=emitted_traces, tracesToReject=negative_traces, hints=hintsWithLocations)
 
     hints_report = ["{} --> {}".format(k, hintsWithLocations[k]) for k in hintsWithLocations]
     stats_log.debug("hints: \n\t{}".format("\n\t".join(hints_report)))
+    print("hints: \n\t{}".format("\n\t".join(hints_report)))
     
     if constants.EXPORT_JSON_TASK:
         os.makedirs("data", exist_ok=True)
