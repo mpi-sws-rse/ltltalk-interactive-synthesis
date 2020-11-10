@@ -36,9 +36,9 @@ WIDTH = 12
 HEIGHT = 9
 
 # steps when looking for a solution
-MIN_FINE_RANGE = 4
+MIN_FINE_RANGE = 5
 MAX_FINE_RANGE = 9
-STEP_FINE_RANGE = 1
+STEP_FINE_RANGE = 2
 
 MIN_COARSE_RANGE = MAX_FINE_RANGE + 1
 MAX_COARSE_RANGE = 40
@@ -63,7 +63,8 @@ HINTS_CUTOFF_VALUE = 0.15
 
 
 
-SPECIAL_LOCATIONS = {(2,3): "kitchen", (1,1): "bathroom"}
+SPECIAL_LOCATIONS = {(20,20): "kitchen", (21,21): "bathroom"} # add meaningful coordinates for experimenting
+# with special locations
 SPECIAL_NAMES = {v: k for k, v in SPECIAL_LOCATIONS.items()}
 
 # x is sa symbol for don't care
