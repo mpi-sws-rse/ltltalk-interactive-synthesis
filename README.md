@@ -18,7 +18,7 @@ This section covers running the experiments as presented in the paper [Interacti
 
 ### Tasks
 Tasks (Table 1 in the paper) are listed in 
-[interactive-synthesis/experiments/multiple_examples_experiments_worlds](/interactive-synthesis/experiments/multiple_examples_experiments_worlds) folder.
+`experiments/multiple_examples_experiments_worlds/` folder.
 
 ### RQ1
 Run the script `/run.sh`.
