@@ -40,15 +40,6 @@ The results corresponding to Table2 are written in condensed_results.csv (the de
 - the results will be in the files `condensedResultsNoHints.csv` and `resultsNoHints.csv` (or, specify a different file 
 when running the command)
 
-
-## Interacting with the whole system (frontent+backend)
-
-### Setup
-Install [frontend](https://github.com/mpi-sws-rse/ltltalk-frontend), 
-[semantic parser](https://github.com/mpi-sws-rse/ltltalk-backend), 
-and [interactive synthesis engine](https://github.com/mpi-sws-rse/ltltalk-interactive-synthesis) locally. To install each part, please follow the instructions in the corresponding repositories.
-
-
 ### RQ3
 - run the script `run_vary_parameters.sh`. 
 The script contains the command 
@@ -59,6 +50,16 @@ The script contains the command
 (the values for max_depth and num_init_candidates are changed with respect to run.sh) and run it. 
 This will take a pretty long time as there are 10x4x5x5 experiments inside 
 (number of tasks x values of depths x values of number of candidates x number of repetitions).
+
+
+
+## Interacting with the whole system (frontent+backend)
+
+### Setup
+Install [frontend](https://github.com/mpi-sws-rse/ltltalk-frontend), 
+[semantic parser](https://github.com/mpi-sws-rse/ltltalk-backend), 
+and [interactive synthesis engine](https://github.com/mpi-sws-rse/ltltalk-interactive-synthesis) locally. To install each part, please follow the instructions in the corresponding repositories.
+
 
 
 
